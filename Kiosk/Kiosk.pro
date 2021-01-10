@@ -37,15 +37,15 @@ MOC_DIR = ../common/build/moc
 RCC_DIR = ../common/build/rcc
 UI_DIR = ../common/build/ui
 unix:OBJECTS_DIR = ../common/build/o/unix
-win:OBJECTS_DIR = ../common/build/o/win
+win:OBJECTS_DIR = ..\common\build\o\win
 macx:OBJECTS_DIR = ../common/build/o/mac
 
 # в зависимости от режима сборки проекта
 # запускаем win deploy приложения в целевой директории, то есть собираем все dll
 CONFIG(debug, debug|release) {
-    QMAKE_POST_LINK = $$(QTDIR)/bin/windeployqt --release --qmldir $$_PRO_FILE_PWD_/qml $$OUT_PWD/../../KioskDebug
+    QMAKE_POST_LINK = $$(QTDIR)\bin\windeployqt --release --qmldir $$_PRO_FILE_PWD_\qml $$OUT_PWD\..\..\KioskDebug
 } else {
-    QMAKE_POST_LINK = $$(QTDIR)/bin/windeployqt --release --qmldir $$_PRO_FILE_PWD_/qml $$OUT_PWD/../../KioskRelease
+    QMAKE_POST_LINK = $$(QTDIR)\bin\windeployqt --release --qmldir $$_PRO_FILE_PWD_\qml $$OUT_PWD\..\..\KioskRelease
 }
 
 # Default rules for deployment.
