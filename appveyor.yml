@@ -14,7 +14,7 @@ build_script:
   - nmake
 
 artifacts:
-  - path: ..\InstallerRelease\Kiosk.offline.exe
+  - path: C:\projects\InstallerRelease\Kiosk.offline.exe
 
 deploy:
   release: SchoolKiosk-v$(APPVEYOR_BUILD_VERSION)
@@ -22,7 +22,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: FBpMGGqGNfo7d+81JLc5kdzQlpQ7KXiG2cdDx6AhR/s6bAoydRJMO0x1xwUB7apA # your encrypted token from GitHub
-  artifact: ..\InstallerRelease\Kiosk.offline.exe
+  artifact: C:\projects\InstallerRelease\Kiosk.offline.exe
   draft: false
   prerelease: false
   on:
