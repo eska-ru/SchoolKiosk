@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/qtquickcontrols2.conf</file>
+        <file>qml/elements/BigIcon.qml</file>
+        <file>qml/MainScreen.qml</file>
+        <file>qml/elements/SmallIcon.qml</file>
+        <file>qml/elements/BottomMenu.qml</file>
+        <file>qml/elements/MainMenu.qml</file>
+        <file>qml/elements/FlickableWebEngineView.qml</file>
+        <file>qml/elements/Scheduler.qml</file>
+        <file>qml/elements/Numbers.qml</file>
+        <file>qml/elements/SchedulerClassChooser.qml</file>
+        <file>qml/elements/Chars.qml</file>
+        <file>qml/elements/SchedulerTable.qml</file>
+        <file>qml/elements/DayTable.qml</file>
+        <file>qml/SchoolInfoScreen.qml</file>
+    </qresource>
+</RCC>

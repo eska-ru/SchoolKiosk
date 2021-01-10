@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>Kiosk</Name>
+    <Version>1.0.0</Version>
+    <Title>1.0.0 Kiosk</Title>
+    <Publisher>WriteWay</Publisher>
+    <ControlScript>installscript.js</ControlScript>
+    <RunProgram>@TargetDir@/Kiosk.exe</RunProgram>
+    <SupportsModify>true</SupportsModify>
+    <RemoveTargetDir>false</RemoveTargetDir>
+    <TargetDir>C:\Kiosk</TargetDir>
+        <AllowSpaceInPath>true</AllowSpaceInPath>
+</Installer>

@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>layouts/en_GB/dialpad.qml</file>
+        <file>layouts/en_GB/digits.qml</file>
+        <file>layouts/en_GB/handwriting.qml</file>
+        <file>layouts/en_GB/main.qml</file>
+        <file>layouts/en_GB/numbers.qml</file>
+        <file>layouts/en_GB/symbols.qml</file>
+        <file>layouts/ru_RU/main.qml</file>
+        <file>layouts/ru_RU/symbols.qml</file>
+        <file>styles/smart/style.qml</file>
+        <file>styles/smart/images/backspace-868482.svg</file>
+        <file>styles/smart/images/check-868482.svg</file>
+        <file>styles/smart/images/enter-868482.svg</file>
+        <file>styles/smart/images/globe-868482.svg</file>
+        <file>styles/smart/images/handwriting-868482.svg</file>
+        <file>styles/smart/images/hidekeyboard-868482.svg</file>
+        <file>styles/smart/images/search-868482.svg</file>
+        <file>styles/smart/images/selectionhandle-bottom.svg</file>
+        <file>styles/smart/images/shift-80c342.svg</file>
+        <file>styles/smart/images/shift-868482.svg</file>
+        <file>styles/smart/images/shift-c5d6b6.svg</file>
+        <file>styles/smart/images/textmode-868482.svg</file>
+    </qresource>
+</RCC>

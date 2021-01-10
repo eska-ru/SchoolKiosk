@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/YanoneKaffeesatz-Bold.otf</file>
+        <file>fonts/YanoneKaffeesatz-Light.otf</file>
+        <file>fonts/YanoneKaffeesatz-Regular.otf</file>
+        <file>fonts/YanoneKaffeesatz-Thin.otf</file>
+    </qresource>
+</RCC>

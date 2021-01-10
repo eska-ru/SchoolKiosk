@@ -1,0 +1,30 @@
+image: Visual Studio 2019
+platform: amd64
+
+install:
+  - set QTDIR=C:\Qt\5.15.2\msvc2019_64
+  - set PATH=%PATH%;%QTDIR%
+  - C:\Qt\5.15.2\msvc2019_64\bin\qtenv2.bat
+  - C:\"Program Files (x86)"\"Microsoft Visual Studio"\2019\Community\VC\Auxiliary\Build\vcvarsall.bat %platform%
+  - set makefiles="NMake Makefiles"
+
+build_script:
+  - cd C:\projects\SchoolKiosk
+  - qmake KioskInstaller.pro
+  - nmake
+
+artifacts:
+  - path: ..\InstallerRelease\Kiosk.offline.exe
+
+deploy:
+  release: SchoolKiosk-v$(APPVEYOR_BUILD_VERSION)
+  description: ''
+  provider: GitHub
+  auth_token:
+    secure: FBpMGGqGNfo7d+81JLc5kdzQlpQ7KXiG2cdDx6AhR/s6bAoydRJMO0x1xwUB7apA # your encrypted token from GitHub
+  artifact: ..\InstallerRelease\Kiosk.offline.exe
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    APPVEYOR_REPO_TAG: false        # deploy on tag push only
