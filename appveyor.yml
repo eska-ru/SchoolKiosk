@@ -1,5 +1,6 @@
 image: Visual Studio 2019
 platform: amd64
+version: '1.0.1.{build}'
 
 install:
   - set QTDIR=C:\Qt\5.15.2\msvc2019_64
@@ -20,7 +21,7 @@ artifacts:
   - path: Kiosk.offline.exe
 
 deploy:
-  release: SchoolKiosk-v$(APPVEYOR_BUILD_VERSION)
+  release: v$(APPVEYOR_BUILD_VERSION)
   description: ''
   provider: GitHub
   auth_token:

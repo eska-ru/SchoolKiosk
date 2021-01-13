@@ -107,13 +107,30 @@ Rectangle {
     Component {
         id: webViewComponent
 
-        WebEngineView {
-            settings.allowRunningInsecureContent: true
-            onLoadProgressChanged: {
-                timer.interval = 1000 * 60 * 5
-                timer.restart();
+        Item {
+            property alias url: view.url
+
+            WebEngineView {
+                id: view
+                anchors.fill: parent
+                settings.allowRunningInsecureContent: true
+                onLoadProgressChanged: {
+                    timer.interval = 1000 * 60 * 5
+                    timer.restart();
+                }
+
+            }
+
+            MouseArea {
+                anchors.fill: parent
+
+                acceptedButtons: Qt.RightButton
+                onClicked: {
+                    mouse.accepted = true;
+                }
             }
         }
+
     }
 
     Component {

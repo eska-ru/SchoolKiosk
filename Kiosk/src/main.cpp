@@ -5,11 +5,14 @@
 #include <QQuickWebEngineProfile>
 #include "requestinterceptor.h"
 #include "textcodec.h"
+#include "updatercontroller.h"
 
 int main(int argc, char *argv[])
 {
     QtWebEngine::initialize();
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
+
+    QString version = "v" + qgetenv("APPVEYOR_BUILD_VERSION");
 
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
     qputenv("QT_VIRTUALKEYBOARD_LAYOUT_PATH", QByteArray(":/layouts"));
@@ -25,6 +28,9 @@ int main(int argc, char *argv[])
     QSettings settings("settings.ini", QSettings::IniFormat);
     settings.setIniCodec("UTF-8");
     settings.value("buttonsData", "").toString();
+
+    bool autoUpdater = settings.value("autoUpdater", true).toBool();
+    new UpdaterController(autoUpdater);
 
     RequestInterceptor *ri = new RequestInterceptor;
     QStringList whitelist = settings.value("whitelist", QStringList()).toStringList();

@@ -24,7 +24,6 @@ ApplicationWindow {
         property string schoolCity
     }
 
-    // @disable-check M16
     Component.onCompleted: {
         window.showFullScreen();
 
