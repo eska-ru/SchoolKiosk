@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 
     QString version = "v" + qgetenv("APPVEYOR_BUILD_VERSION");
+    QCoreApplication::setApplicationVersion(version);
 
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
     qputenv("QT_VIRTUALKEYBOARD_LAYOUT_PATH", QByteArray(":/layouts"));
