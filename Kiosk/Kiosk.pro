@@ -2,6 +2,8 @@ QT += quick virtualkeyboard svg webengine network core
 
 CONFIG += c++17 sdk_no_version_check strict_c++
 
+VERSION = $$(APPVEYOR_BUILD_VERSION)
+
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
