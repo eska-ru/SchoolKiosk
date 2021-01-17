@@ -41,7 +41,6 @@ CAutoUpdaterGithub::CAutoUpdaterGithub(const QString& githubRepositoryAddress) :
     _updatePageAddress(githubRepositoryAddress + "/releases/")
 {
 	assert(githubRepositoryAddress.contains("https://github.com/"));
-	assert(!currentVersionString.isEmpty());
 }
 
 void CAutoUpdaterGithub::setUpdateStatusListener(UpdateStatusListener* listener)

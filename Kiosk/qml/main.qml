@@ -70,6 +70,16 @@ ApplicationWindow {
         }
     }
 
+    Label {
+        id: version
+        text: Qt.application.version
+        color: "lightgrey"
+        font.pixelSize: 8 * root.yScale
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        opacity: 0.3
+    }
+
     InputPanel {
         id: inputPanel
         z: 99

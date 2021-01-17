@@ -7,4 +7,6 @@ SUBDIRS += \
     Installer
 
 DISTFILES += \
-    appveyor.yml
+    appveyor.yml \
+    initFiles/logo.png \
+    initFiles/RegTweaks.reg

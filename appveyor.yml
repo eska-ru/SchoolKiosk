@@ -16,9 +16,11 @@ build_script:
 
 after_build:
   - cp C:\projects\InstallerRelease\Kiosk.offline.exe .
+  - 7z a initFiles.zip C:\projects\SchoolKiosk\initFiles\* C:\projects\SchoolKiosk\Kiosk\settings.ini
   
 artifacts:
   - path: Kiosk.offline.exe
+  - path: initFiles.zip
 
 deploy:
   release: v$(APPVEYOR_BUILD_VERSION)
@@ -26,7 +28,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: FBpMGGqGNfo7d+81JLc5kdzQlpQ7KXiG2cdDx6AhR/s6bAoydRJMO0x1xwUB7apA # your encrypted token from GitHub
-  artifact: Kiosk.offline.exe
+  artifact: Kiosk.offline.exe, initFiles.zip
   draft: false
   prerelease: false
   on:
