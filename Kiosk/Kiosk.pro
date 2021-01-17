@@ -2,7 +2,7 @@ QT += quick virtualkeyboard svg webengine network core
 
 CONFIG += c++17 sdk_no_version_check strict_c++
 
-VERSION = 0.0.0.1
+VERSION = $$(APPVEYOR_BUILD_VERSION)
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
