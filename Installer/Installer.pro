@@ -44,7 +44,7 @@ INPUT = $$PWD/config/config.xml $$PWD/packages
 offlineInstaller.depends = copydata
 offlineInstaller.input = INPUT
 offlineInstaller.output = $$INSTALLER_OFFLINE
-offlineInstaller.commands = C:\Qt\Tools\QtInstallerFramework\4.0\bin\binarycreator --offline-only -c $$PWD/config/config.xml -p $$PWD/packages ${QMAKE_FILE_OUT}
+offlineInstaller.commands = C:\Qt\Tools\QtInstallerFramework\4.1\bin\binarycreator --offline-only -c $$PWD/config/config.xml -p $$PWD/packages ${QMAKE_FILE_OUT}
 offlineInstaller.CONFIG += target_predeps no_link combine
 
 QMAKE_EXTRA_COMPILERS += offlineInstaller
