@@ -23,10 +23,14 @@ Item {
             }
 
             var c = className.match('\\D');
+            if (c) {
             listModel.append({
                                  "charValue": (c.length > 0) ? c[0] : "",
                                  "classId": item.classId
                              })
+            } else {
+                root.clicked(item.classId, "");
+            }
         }
     }
 
