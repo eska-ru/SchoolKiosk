@@ -11,7 +11,7 @@ Item {
     onClassIdChanged: {
         var now = new Date(),
             after = new Date();
-        after.setDate(after.getDate() + 7);
+        after.setDate(after.getDate() + 6);
 
         var url = "https://asurso.ru/api/lacc.asp?Function=GetScheduleForClass&ClassID=" +
                 classId + "&StartDate=" + formatDate(now) + "&EndDate=" + formatDate(after);
